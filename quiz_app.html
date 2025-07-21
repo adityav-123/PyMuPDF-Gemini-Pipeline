@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Olympiad Quiz</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .feedback { transition: opacity 0.5s ease-in-out; }
+        .option-btn {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 0.75rem;
+            border: 2px solid #e5e7eb; /* gray-200 */
+            border-radius: 0.5rem;
+            text-align: left;
+            transition: all 0.2s;
+            width: 100%;
+        }
+        .option-btn:hover { background-color: #f9fafb; /* gray-50 */ border-color: #60a5fa; /* blue-400 */ }
+        .option-btn:disabled { opacity: 1; cursor: default; }
+        .option-btn:disabled:hover { background-color: white; border-color: #e5e7eb; }
+        .option-btn.correct { border-color: #22c55e; /* green-500 */ background-color: #f0fdf4; /* green-50 */ }
+        .option-btn.incorrect { border-color: #ef4444; /* red-500 */ background-color: #fef2f2; /* red-50 */ }
+    </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
+
+    <div id="quiz-container" class="bg-white w-full max-w-3xl rounded-xl shadow-lg p-6 md:p-8">
+        <div id="header" class="flex justify-between items-center border-b pb-4 mb-6">
+            <h1 class="text-xl md:text-2xl font-bold text-gray-800">Math Olympiad Practice</h1>
+            <div id="question-counter" class="text-sm font-semibold text-gray-500 bg-gray-100 px-3 py-1 rounded-full"></div>
+        </div>
+
+        <div id="loading" class="text-center text-gray-600">Loading questions...</div>
+
+        <div id="quiz-content" class="hidden">
+            <div id="question-text" class="text-gray-900 text-lg mb-4 whitespace-pre-wrap"></div>
+            <div id="question-images-container" class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6"></div>
+            <div id="options-container" class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6"></div>
+            <div id="feedback-container" class="h-8 mb-4">
+                <p id="feedback" class="text-center font-bold text-lg opacity-0"></p>
+            </div>
+            <div id="navigation" class="flex justify-between items-center border-t pt-4">
+                <button id="prev-btn" class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-6 rounded-lg transition-colors">Previous</button>
+                <button id="next-btn" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-6 rounded-lg transition-colors">Next</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const loadingEl = document.getElementById('loading');
+            const quizContentEl = document.getElementById('quiz-content');
+            const questionCounterEl = document.getElementById('question-counter');
+            const questionTextEl = document.getElementById('question-text');
+            const questionImagesEl = document.getElementById('question-images-container');
+            const optionsContainerEl = document.getElementById('options-container');
+            const feedbackEl = document.getElementById('feedback');
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+
+            let questions = [];
+            let currentQuestionIndex = 0;
+
+            async function loadQuestions() {
+                try {
+                    const response = await fetch('./final_output/questions_final.json');
+                    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                    questions = await response.json();
+                    startQuiz();
+                } catch (error) {
+                    loadingEl.textContent = 'Failed to load questions. Make sure you are running a local server.';
+                    console.error('Error loading questions:', error);
+                }
+            }
+
+            function startQuiz() {
+                if (questions.length > 0) {
+                    loadingEl.classList.add('hidden');
+                    quizContentEl.classList.remove('hidden');
+                    displayQuestion();
+                } else {
+                    loadingEl.textContent = 'No questions found.';
+                }
+            }
+
+            function displayQuestion() {
+                questionImagesEl.innerHTML = '';
+                optionsContainerEl.innerHTML = '';
+                feedbackEl.textContent = '';
+                feedbackEl.className = 'text-center font-bold text-lg opacity-0';
+
+                const question = questions[currentQuestionIndex];
+                questionCounterEl.textContent = `Question ${currentQuestionIndex + 1} of ${questions.length}`;
+                questionTextEl.textContent = question.question_text;
+
+                // Display general question images
+                (question.question_images || []).forEach(imgPath => {
+                    const img = document.createElement('img');
+                    img.src = imgPath;
+                    img.alt = 'Question Image';
+                    img.className = 'w-full h-auto object-contain rounded-lg border';
+                    questionImagesEl.appendChild(img);
+                });
+
+                // Display options (text or image)
+                ['A', 'B', 'C', 'D'].forEach(key => {
+                    if (question.options[key]) {
+                        const optionData = question.options[key];
+                        const button = document.createElement('button');
+                        button.className = 'option-btn';
+                        button.onclick = () => checkAnswer(key, button);
+
+                        const label = document.createElement('span');
+                        label.className = 'font-bold text-gray-700';
+                        label.textContent = `${key}.`;
+                        button.appendChild(label);
+
+                        if (optionData.type === 'text') {
+                            const text = document.createElement('span');
+                            text.textContent = optionData.content;
+                            button.appendChild(text);
+                        } else if (optionData.type === 'image') {
+                            const imageWrapper = document.createElement('div');
+                            imageWrapper.className = 'flex gap-2';
+                            optionData.content.forEach(imgPath => {
+                                const img = document.createElement('img');
+                                img.src = imgPath;
+                                img.alt = `Option ${key}`;
+                                img.className = 'h-16 w-auto object-contain';
+                                imageWrapper.appendChild(img);
+                            });
+                            button.appendChild(imageWrapper);
+                        }
+                        optionsContainerEl.appendChild(button);
+                    }
+                });
+                updateNavButtons();
+            }
+
+            function checkAnswer(selectedOption, buttonEl) {
+                const correctAnswer = questions[currentQuestionIndex].answer;
+                document.querySelectorAll('.option-btn').forEach(btn => btn.disabled = true);
+
+                if (selectedOption === correctAnswer) {
+                    feedbackEl.textContent = 'Correct!';
+                    feedbackEl.className = 'feedback text-center font-bold text-lg text-green-500 opacity-100';
+                    buttonEl.classList.add('correct');
+                } else {
+                    feedbackEl.textContent = `Incorrect! The correct answer is ${correctAnswer}.`;
+                    feedbackEl.className = 'feedback text-center font-bold text-lg text-red-500 opacity-100';
+                    buttonEl.classList.add('incorrect');
+                    // Highlight the correct answer
+                    document.querySelectorAll('.option-btn').forEach(btn => {
+                        if (btn.textContent.startsWith(correctAnswer)) {
+                            btn.classList.add('correct');
+                        }
+                    });
+                }
+            }
+
+            function updateNavButtons() {
+                prevBtn.disabled = currentQuestionIndex === 0;
+                nextBtn.disabled = currentQuestionIndex === questions.length - 1;
+                prevBtn.classList.toggle('opacity-50', prevBtn.disabled);
+                nextBtn.classList.toggle('opacity-50', nextBtn.disabled);
+            }
+
+            prevBtn.addEventListener('click', () => {
+                if (currentQuestionIndex > 0) {
+                    currentQuestionIndex--;
+                    displayQuestion();
+                }
+            });
+
+            nextBtn.addEventListener('click', () => {
+                if (currentQuestionIndex < questions.length - 1) {
+                    currentQuestionIndex++;
+                    displayQuestion();
+                }
+            });
+
+            loadQuestions();
+        });
+    </script>
+</body>
+</html>
