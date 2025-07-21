@@ -1,0 +1,319 @@
+[
+    {
+        "question_number": 1,
+        "question_text": "1. Find the next figures in the figure pattern given below.",
+        "images": [
+            "final_output\\page1_img2.png",
+            "final_output\\page1_img3.png",
+            "final_output\\page1_img4.png",
+            "final_output\\page1_img5.png",
+            "final_output\\page1_img6.png",
+            "final_output\\page1_img7.png"
+        ],
+        "options": {},
+        "answer": "D"
+    },
+    {
+        "question_number": 2,
+        "question_text": "2. Complete the number pattern.",
+        "images": [
+            "final_output\\page1_img8.png",
+            "final_output\\page1_img10.png",
+            "final_output\\page1_img9.png",
+            "final_output\\page2_img2.png",
+            "final_output\\page2_img3.png"
+        ],
+        "options": {},
+        "answer": "C"
+    },
+    {
+        "question_number": 3,
+        "question_text": "3. In the questions given below, the series with one or more\nterms figures are missing marked with \u2018?\u2019. Choose the\ncorrect option to replace the \u2018?\u2019 mark(s).\n[A] 19\n[B] 18\n[C] 17\n[D] 20",
+        "images": [
+            "final_output\\page2_img4.png",
+            "final_output\\page2_img5.png"
+        ],
+        "options": {},
+        "answer": "C"
+    },
+    {
+        "question_number": 4,
+        "question_text": "4. Number of the groups of 9 paper clips (\n) shown here is\n[A] 2\n[B] 3\n[C] 9\n[D] 27",
+        "images": [
+            "final_output\\page2_img6.jpeg"
+        ],
+        "options": {},
+        "answer": "D"
+    },
+    {
+        "question_number": 5,
+        "question_text": "5. How many bananas are kept outside the basket?\n[A] 1\n[B] 2\n[C] 3\n[D] 4",
+        "images": [
+            "final_output\\page2_img7.png"
+        ],
+        "options": {},
+        "answer": "D"
+    },
+    {
+        "question_number": 6,
+        "question_text": "6. A programme of children ended at the time shown on the\nclock. At what time did the programme end?\n[A] 6: 00\n[B] 5: 20\n[C] 7: 00\n[D] None of these",
+        "images": [
+            "final_output\\page3_img2.png"
+        ],
+        "options": {},
+        "answer": "B"
+    },
+    {
+        "question_number": 7,
+        "question_text": "7. Suresh had 112 bookmarks. He gives some bookmarks to her\npupils, he had 13 bookmarks left. How many bookmarks did\nhe give away?\n[A] 110\n[B] 125\n[C] 99\n[D] 130",
+        "images": [],
+        "options": {},
+        "answer": "C"
+    },
+    {
+        "question_number": 8,
+        "question_text": "8. Count and write the amount of money.\n[A] Rs 70.00 [B] Rs 76.01\n[C] Rs 75.40 [D] Rs 80.04",
+        "images": [
+            "final_output\\page4_img2.jpeg"
+        ],
+        "options": {},
+        "answer": "B"
+    },
+    {
+        "question_number": 9,
+        "question_text": "9. Six cats are numbered as follows:\nWhich cat shows the number lying between 40 and 50 and also\nhaving 3 at ones place?",
+        "images": [
+            "final_output\\page4_img3.png",
+            "final_output\\page4_img4.png",
+            "final_output\\page4_img5.png",
+            "final_output\\page5_img3.png",
+            "final_output\\page5_img2.png"
+        ],
+        "options": {},
+        "answer": "B"
+    },
+    {
+        "question_number": 10,
+        "question_text": "10. Sonia bought 45 candies. She gave 22 cookies to her sister.\nHow many candies are left with her?\n[A] 42\n[B] 23\n[C] 50\n[D] 43",
+        "images": [],
+        "options": {},
+        "answer": "B"
+    },
+    {
+        "question_number": 11,
+        "question_text": "11. Which of the following is greatest?",
+        "images": [
+            "final_output\\page5_img4.png"
+        ],
+        "options": {},
+        "answer": "D"
+    },
+    {
+        "question_number": 12,
+        "question_text": "12. Write \u2018+\u2019 or \u2018\u2013\u2019 in each\nto complete the number\nsentence.\n[A] +, +\n[B] +, \u2013\n[C] \u2013, \u2013\n[D] \u2013, +",
+        "images": [
+            "final_output\\page5_img5.png",
+            "final_output\\page6_img2.png"
+        ],
+        "options": {},
+        "answer": "B"
+    },
+    {
+        "question_number": 13,
+        "question_text": "13.\nObject _______________ is the heaviest.\n[A] 3\n[B] 5\n[C] 4\n[D] 1\nDirection (Q.No.14 & 15): Study the diagram below and\nanswer the questions 14 and 15.\n4 cm\nA\nB\n3 cm\nD\nC\n10 cm",
+        "images": [
+            "final_output\\page6_img3.png"
+        ],
+        "options": {},
+        "answer": "C"
+    },
+    {
+        "question_number": 14,
+        "question_text": "14. The length of BD is 1 cm less than the total length of AB\nand AD.\nCD is __________ cm longer than BD.\n[A] 5\n[B] 4\n[C] 8\n[D] 9",
+        "images": [],
+        "options": {},
+        "answer": "B"
+    },
+    {
+        "question_number": 15,
+        "question_text": "15. The length of CD is twice that of BC. What is the length of\nall the sides of triangle BCD?\n[A] 15 cm\n[B] 31 cm\n[C] 42 cm\n[D] 38 cm",
+        "images": [],
+        "options": {},
+        "answer": "A"
+    },
+    {
+        "question_number": 16,
+        "question_text": "16. Which of the following clocks shows 30 minutes after 4\nO\u2019clock?",
+        "images": [],
+        "options": {},
+        "answer": "B"
+    },
+    {
+        "question_number": 17,
+        "question_text": "17. Sent gold High School has 453 students. It has 23 more\nstudents than kiddy gold High School. How many students\ndoes kiddy gold High School have?\n[A] 400\n[B] 430\n[C] 403\n[D] 340",
+        "images": [],
+        "options": {},
+        "answer": "B"
+    },
+    {
+        "question_number": 18,
+        "question_text": "18. Tanshu spent Rs 35.70 on a ball and Rs 50.30 on a toy car.\nHow much did he spend altogether?\n[A] Rs 80\n[B] Rs 85\n[C] Rs 58\n[D] Rs 86",
+        "images": [],
+        "options": {},
+        "answer": "D"
+    },
+    {
+        "question_number": 19,
+        "question_text": "19. Which tree has apples more than 6 but less than 9?",
+        "images": [
+            "final_output\\page8_img2.jpeg",
+            "final_output\\page8_img3.jpeg",
+            "final_output\\page8_img4.jpeg",
+            "final_output\\page8_img5.jpeg"
+        ],
+        "options": {},
+        "answer": "B"
+    },
+    {
+        "question_number": 20,
+        "question_text": "20. Which abacus shows 15 \u2013 13 = 13?",
+        "images": [
+            "final_output\\page8_img6.png",
+            "final_output\\page8_img7.png",
+            "final_output\\page8_img8.png",
+            "final_output\\page8_img9.png"
+        ],
+        "options": {},
+        "answer": "C"
+    },
+    {
+        "question_number": 21,
+        "question_text": "21. Which of the following is smallest?",
+        "images": [
+            "final_output\\page9_img2.png"
+        ],
+        "options": {},
+        "answer": "C"
+    },
+    {
+        "question_number": 22,
+        "question_text": "22. 6 hundreds 3 tens 2 ones \u2013 3 hundreds 2 tens 6 ones =\n____________.\n[A] 306\n[B] 360\n[C] 603\n[D] 305",
+        "images": [
+            "final_output\\page9_img3.png"
+        ],
+        "options": {},
+        "answer": "A"
+    },
+    {
+        "question_number": 23,
+        "question_text": "23.\nWhat does\nstand for ?\n[A] 7\n[B] 5\n[C] 3\n[D] 4",
+        "images": [
+            "final_output\\page9_img4.png",
+            "final_output\\page9_img5.png"
+        ],
+        "options": {},
+        "answer": "D"
+    },
+    {
+        "question_number": 24,
+        "question_text": "24. A number bond is shown below.\nWhat is the value of M \u00d7 N?\n[A] 35\n[B] 43\n[C] 52\n[D] 25",
+        "images": [
+            "final_output\\page9_img6.png"
+        ],
+        "options": {},
+        "answer": "D"
+    },
+    {
+        "question_number": 25,
+        "question_text": "25. Tanya has following two pencils.\nFind the total length of both the pencils.\n[A] 7 units\n[B] 6 units\n[C] 5 units\n[D] 9 units",
+        "images": [
+            "final_output\\page10_img2.png",
+            "final_output\\page10_img3.png"
+        ],
+        "options": {},
+        "answer": "D"
+    },
+    {
+        "question_number": 26,
+        "question_text": "26. There were 298 hens and cows on a farm.\nThere were 153 hens.\nHow many cows were there?\n[A] 138\n[B] 140\n[C] 145\n[D] 144",
+        "images": [],
+        "options": {},
+        "answer": "C"
+    },
+    {
+        "question_number": 27,
+        "question_text": "27. Write the correct time for the clock shown below.\n[A] 5 : 15\n[B] 5 : 40\n[C] 6 : 20\n[D] 3 : 20",
+        "images": [
+            "final_output\\page10_img4.png"
+        ],
+        "options": {},
+        "answer": "A"
+    },
+    {
+        "question_number": 28,
+        "question_text": "28. Sumit has following flowers and balloons.\nWhich statement is true?\n[A] Flowers are more than balloons.\n[B] Flowers are equal to balloons.\n[C] Flowers are less than balloons\n[D] Balloons are 2 more than flowers.",
+        "images": [
+            "final_output\\page11_img2.png",
+            "final_output\\page11_img3.png"
+        ],
+        "options": {},
+        "answer": "C"
+    },
+    {
+        "question_number": 29,
+        "question_text": "29. A bag of rice weighs 3 kg. How much do 6 bags of rice\nweight?\n[A] 18 kg\n[B] 24 kg\n[C] 15 kg\n[D] 17 kg",
+        "images": [],
+        "options": {},
+        "answer": "A"
+    },
+    {
+        "question_number": 30,
+        "question_text": "30. If only all Saturdays and Sundays are holidays, then in the\nmonth of December 2014 how many holidays will we get?\n[A] 6\n[B] 8\n[C] 10\n[D] 7",
+        "images": [
+            "final_output\\page11_img4.jpeg"
+        ],
+        "options": {},
+        "answer": "B"
+    },
+    {
+        "question_number": 31,
+        "question_text": "31. How much do the counters add up to?\n[A] 253\n[B] 235\n[C] 325\n[D] 532",
+        "images": [
+            "final_output\\page12_img2.png"
+        ],
+        "options": {},
+        "answer": "A"
+    },
+    {
+        "question_number": 32,
+        "question_text": "32. The packet of rice has a mass of _______________ kg.\nFlour\n[A] 9\n[B] 15\n[C] 18\n[D] 12",
+        "images": [],
+        "options": {},
+        "answer": "D"
+    },
+    {
+        "question_number": 33,
+        "question_text": "33. Fill in the blank:\nThe book is ________________ the lamp.\n[A]Equal to\n[B] Lighter than\n[C] Heavier than [D] None of these",
+        "images": [
+            "final_output\\page13_img2.png"
+        ],
+        "options": {},
+        "answer": "B"
+    },
+    {
+        "question_number": 34,
+        "question_text": "34. Which of the following is the CORRECT way of writing 8\nless than 14?\n[A] 14 \u2013 8 = 6\n[B] 14 + 8 = 6\n[C] 14 \u2013 6 = 8\n[D] 14 + 6 = 8",
+        "images": [],
+        "options": {},
+        "answer": "A"
+    },
+    {
+        "question_number": 35,
+        "question_text": "35. Tonu gave Rs 50 to buy this ball. How much money will he\nget back?\n[A]  Rs 15\n[B]Rs  25\n[C]   Rs 20\n[D]   Rs 17",
+        "images": [
+            "final_output\\page13_img3.png"
+        ],
+        "options": {},
+        "answer": "B"
+    }
+]
